@@ -1,11 +1,18 @@
+/*
+POJ - laboratorium 4 2019-04-27
+Grupa: Maciej Rybacki i Iwona Rymanowska
+Zadanie 7
+*/
 import java.util.*;
+import java.io.*;
 
 public class WordCounter {
     private String sentence;
+    private Scanner x;
 
-    public WordCounter(String _sentence) {
-        sentence = _sentence;
-    }
+   // public WordCounter(String _sentence) {
+  //      sentence = _sentence;
+  //  }
 
     public String getSentence() {
         return sentence;
@@ -13,6 +20,25 @@ public class WordCounter {
 
     public void setSentence(String sentence) {
         this.sentence = sentence;
+    }
+
+    public void openFile(){
+        try {
+            x = new Scanner(new File("/Users/levar/IdeaProjects/03_07/src/Words.txt"));
+        }
+        catch (Exception e) {
+            System.out.println("could not find file");
+        }
+    }
+
+    public void readFile(){
+        sentence = x.nextLine();
+    }
+
+
+
+    public void closeFile (){
+        x.close();
     }
 
     public String prepareSentence () {
