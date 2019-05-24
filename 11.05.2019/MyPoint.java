@@ -1,3 +1,8 @@
+/*
+Zadanie nr1 Laboratorium5,  Bartosz Bizoń, Iwona Rymanowska
+*/
+
+
 import static java.lang.Math.pow;
 import static java.lang.StrictMath.sqrt;
 public class MyPoint {
@@ -38,8 +43,12 @@ public class MyPoint {
         setY(y);
     }
 
-    public void toString(int x, int y){
-        System.out.println("x: "+x+" y:"+y);
+    @Override
+    public String toString() {
+        return "MyPoint{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     double distance(int x, int y, int x2, int y2){
@@ -52,18 +61,5 @@ public class MyPoint {
         return xy;
     }
 
-    public static void main(String[] args) {
 
-        int[] tabOfX = new int[11];
-        int[] tabOfY = new int[11];
-
-        MyPoint punkt = new MyPoint();
-
-        for(int i=1;i<11;i++) {
-            tabOfX[i]=i;
-            tabOfY[i]=i;
-            System.out.println("Odleglosc pomiedzy [x:0 , y:0] a "+"[x1:"+tabOfX[i]+" , y1:"+tabOfY[i]+"] wynosi: "
-                    +punkt.distance(0, 0, tabOfX[i], tabOfY[i]));
-        }
-    }
 }

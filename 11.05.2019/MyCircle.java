@@ -1,10 +1,10 @@
+/*
+Zadanie nr2 Laboratorium5,  Bartosz Bizoń, Iwona Rymanowska
+*/
+
 public class MyCircle {
     private  MyPoint center =new MyPoint(0,0);
     private int radius =1;
-    private int centerX;
-    private int centerY;
-    private int centerXY[] = new int[2];
-    ;
 
     public MyCircle(){
 
@@ -27,22 +27,22 @@ public class MyCircle {
         this.radius = radius;
     }
     public int getCenterX(){
-        return centerX;
+        return center.getX();
     }
     public void setCenterX(int centerX){
-        this.centerX=centerX;
+        this.center.setX(centerX);
     }
     public int getCenterY(){
-        return centerY;
+        return center.getY();
     }
     public void setCenterY(int centerY){
-        this.centerY = centerY;
+        this.center.setY(centerY);
     }
     public int[] getCenterXY(){
-        return centerXY;
+        return center.getXY();
     }
     public void setCenterXY(int centerXY[]){
-        this.centerXY = centerXY;
+        this.center.setXY(centerXY[0],centerXY[1]);
     }
     public String toString() {
         return "MyCircle{" +
